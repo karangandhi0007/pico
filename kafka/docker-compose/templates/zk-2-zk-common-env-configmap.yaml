@@ -1,0 +1,9 @@
+apiVersion: v1
+data:
+  ZOOKEEPER_CLIENT_PORT: "2181"
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  labels:
+    io.kompose.service: zk-2-zk-common-env
+  name: zk-2-zk-common-env

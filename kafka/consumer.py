@@ -7,7 +7,7 @@ topic = "testpico"
 
 consumer = KafkaConsumer(
     topic, 
-    bootstrap_servers=['localhost:9093'])
+    bootstrap_servers=['10.146.0.2:9093'])
 
 
 # Set the consumer in a Flask App

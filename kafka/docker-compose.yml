@@ -1,4 +1,4 @@
-version: '3.4'
+version: '3'
 
 services:
   zk-1: &zk
@@ -30,7 +30,7 @@ services:
     env_file:
       - kafka-common.env
     environment:
-      KAFKA_ADVERTISED_LISTENERS: INTERNAL://kafka-1:9192,EXTERNAL://localhost:9092
+      KAFKA_ADVERTISED_LISTENERS: INTERNAL://kafka-1:9192,EXTERNAL://10.146.0.2:9092
       KAFKA_JMX_HOSTNAME: kafka-1
     ports:
       - 9092:9092
@@ -39,7 +39,7 @@ services:
   kafka-2:
     <<: *kafka
     environment:
-      KAFKA_ADVERTISED_LISTENERS: INTERNAL://kafka-2:9192,EXTERNAL://localhost:9093
+      KAFKA_ADVERTISED_LISTENERS: INTERNAL://kafka-2:9192,EXTERNAL://10.146.0.2:9093
       KAFKA_JMX_HOSTNAME: kafka-2
     ports:
       - 9093:9092
@@ -48,7 +48,7 @@ services:
   kafka-3:
     <<: *kafka
     environment:
-      KAFKA_ADVERTISED_LISTENERS: INTERNAL://kafka-3:9192,EXTERNAL://localhost:9094
+      KAFKA_ADVERTISED_LISTENERS: INTERNAL://kafka-3:9192,EXTERNAL://10.146.0.2:9094
       KAFKA_JMX_HOSTNAME: kafka-3
     ports:
       - 9094:9092
