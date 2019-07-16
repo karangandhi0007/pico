@@ -16,7 +16,7 @@ def publish_video(video_file):
     :param video_file: path to video file <string>
     """
     # Start up producer
-    producer = KafkaProducer(bootstrap_servers='10.140.0.2:9092')
+    producer = KafkaProducer(bootstrap_servers='my-cluster-kafka-brokers:9092')
 
     # Open file
     video = cv2.VideoCapture(video_file)
@@ -49,7 +49,7 @@ def publish_camera():
     """
 
     # Start up producer
-    producer = KafkaProducer(bootstrap_servers='10.140.0.2:9092')
+    producer = KafkaProducer(bootstrap_servers='my-cluster-kafka-brokers:9092')
 
     
     camera = cv2.VideoCapture(0)
