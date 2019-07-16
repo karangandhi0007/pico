@@ -7,7 +7,7 @@ topic = "testpico"
 
 consumer = KafkaConsumer(
     topic, 
-    bootstrap_servers=['10.146.0.2:9093'])
+    bootstrap_servers=['my-cluster-kafka-brokers:9092'])
 
 
 # Set the consumer in a Flask App
