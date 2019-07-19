@@ -37,7 +37,7 @@ def publish_video(video_file):
         # Convert to bytes and send to kafka
         producer.send(topic, buffer.tobytes())
 
-        time.sleep(0.2)
+        time.sleep(0.04)
     video.release()
     print('publish complete')
 
@@ -63,7 +63,7 @@ def publish_camera():
     
     
             # Choppier stream, reduced load on processor
-            time.sleep(0.2)
+            time.sleep(0.04)
             
     except:
         print("\nExiting.")
