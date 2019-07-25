@@ -7,7 +7,7 @@ topic = "testpico"
 
 consumer = KafkaConsumer(
     topic, 
-    bootstrap_servers=['my-cluster-kafka-brokers:9092'])
+    bootstrap_servers=['my-cluster-kafka-brokers:9092'], fetch_max_bytes=524288000, max_partition_fetch_bytes=104857600, max_in_flight_requests_per_connection=100, max_poll_records=5000, receive_buffer_bytes=100000000, send_buffer_bytes=100000000)
 
 
 # Set the consumer in a Flask App
