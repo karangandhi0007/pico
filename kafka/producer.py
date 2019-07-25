@@ -20,6 +20,11 @@ def publish_video(video_file):
 
     # Open file
     video = cv2.VideoCapture(video_file)
+    video.set(cv2.CAP_PROP_FRAME_WIDTH,3840)
+
+    video.set(cv2.CAP_PROP_FRAME_HEIGHT,2160)
+
+    video.set(cv2.CAP_PROP_FPS,60)
     
     print('publishing video...')
 
