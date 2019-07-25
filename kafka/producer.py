@@ -16,7 +16,7 @@ def publish_video(video_file):
     :param video_file: path to video file <string>
     """
     # Start up producer
-    producer = KafkaProducer(bootstrap_servers='my-cluster-kafka-brokers:9092', batch_size=8192, linger_ms=100, acks=0, retries=0, buffer_memory=33554432, send_buffer_bytes=100000000)
+    producer = KafkaProducer(bootstrap_servers='my-cluster-kafka-brokers:9092', batch_size=8192, linger_ms=0, acks=0, retries=0, buffer_memory=3096000000, send_buffer_bytes=100000000, receive_buffer_bytes=100000000)
 
     # Open file
     video = cv2.VideoCapture(video_file)
